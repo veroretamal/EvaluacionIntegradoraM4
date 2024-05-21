@@ -1,5 +1,6 @@
 package org.example.vista;
 import org.example.main.model.Cuenta;
+import org.example.main.service.ServiceCuenta;
 
 import  java.util.Scanner;
 import static org.example.main.service.ServiceConversorMoneda.convertirDivisas;
@@ -27,15 +28,15 @@ public class MenuAlkeWallet {
         int option= leer.nextInt();
         switch (option){
             case 1:
-                //consultaSaldo();
+                ServiceCuenta.consultaSaldo();
                 menu();
                 break;
             case 2:
-                //retiro();
+                ServiceCuenta.retirar();
                 menu();
                 break;
             case 3:
-                //deposito();
+                ServiceCuenta.depositar();
                 menu();
                 break;
             case 4:

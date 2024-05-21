@@ -8,12 +8,12 @@ public class ServiceCuenta {
        return saldo;
     }
 
-    public static boolean deposito(Cuenta cuenta, double monto) {
+    public static boolean depositar(Cuenta cuenta, double monto) {
         cuenta.setSaldo (cuenta.getSaldo()+ monto);
         return true;
     }
 
-    public static boolean retiro(Cuenta cuenta, double monto) {
+    public static boolean retirar(Cuenta cuenta, double monto) {
         if(cuenta.getSaldo() < monto) {
             System.out.println("Fondos insuficientes");
             return false;
