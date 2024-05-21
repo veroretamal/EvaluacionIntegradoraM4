@@ -18,10 +18,6 @@ public class AlkeBanco {
         Cliente cliente2= new Cliente("Cecilia", "Arriagada", "171191739");
         Cuenta cuentaCliente1= new Cuenta("010016008");
         Cuenta cuentaCliente2= new Cuenta("010016009");
-        Moneda peso= new Moneda("Peso Chileno", 1, "CLP");
-        Moneda dolar= new Moneda("Dolar estadounidense", 0.001059, "USD");
-        Moneda euro= new Moneda("Euro", 0.00098474, "EUR");
-        Moneda yen= new Moneda("Japanese Yen", 0.1622, "JPY");
         List<Cliente> clientes= new LinkedList<>();
         clientes.add(cliente1);
         clientes.add(cliente2);

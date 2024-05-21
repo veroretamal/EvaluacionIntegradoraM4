@@ -6,7 +6,9 @@ public class Moneda implements Conversor {
     private String codigoDivisa;
 
     public Moneda(String nombreDivisa, double tasaDivisa, String codigoDivisa) {
-
+        this.nombreDivisa = nombreDivisa;
+        this.tasaDivisa = tasaDivisa;
+        this.codigoDivisa = codigoDivisa;
     }
 
     public String getNombreDivisa() {

@@ -27,15 +27,15 @@ public class MenuAlkeWallet {
         int option= leer.nextInt();
         switch (option){
             case 1:
-                consultaSaldo();
+                //consultaSaldo();
                 menu();
                 break;
             case 2:
-                retiro();
+                //retiro();
                 menu();
                 break;
             case 3:
-                deposito();
+                //deposito();
                 menu();
                 break;
             case 4:
