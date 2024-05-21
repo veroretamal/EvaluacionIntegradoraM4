@@ -1,6 +1,5 @@
 package org.example.main.service;
 
-import org.example.main.model.Conversor;
 import org.example.main.model.Moneda;
 
 import java.util.ArrayList;
@@ -8,9 +7,14 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class ServiceConversorMoneda implements Conversor {
+public class ServiceConversorMoneda{
+
     public static void convertirDivisas(){
-        List<Moneda> monedas= new ArrayList<>();
+        Moneda peso = new Moneda("Chilean Peso", 1, "CLP");
+        Moneda dolar = new Moneda("American Dollar", 0.001059, "USD");
+        Moneda euro = new Moneda("Euro", 0.00098474, "EUR");
+        Moneda yen = new Moneda("Japanese Yen", 0.1622, "JPY");
+        List<Moneda> monedas = new ArrayList<>();
         monedas.add(peso);
         monedas.add(dolar);
         monedas.add(euro);

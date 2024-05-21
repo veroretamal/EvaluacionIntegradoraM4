@@ -3,13 +3,13 @@ package org.example.main.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente {
+public class Cliente { //se definen los atributos correspondientes a la clase Cliente
     private String nombre;
     private String apellido;
     private String rut;
     private List<Cuenta> cuentas = new ArrayList<>();
 
-    public Cliente(String nombre, String apellido, String rut) {
+    public Cliente(String nombre, String apellido, String rut) { //constructor
         this.nombre = nombre;
         this.apellido = apellido;
         this.rut = rut;
@@ -20,6 +20,7 @@ public class Cliente {
         this.cuentas = cuentas;
     }
 
+    //getters y setters de atributos privados
     public String getNombre() {
         return nombre;
     }

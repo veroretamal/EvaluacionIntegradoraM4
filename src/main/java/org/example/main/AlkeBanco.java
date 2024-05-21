@@ -2,9 +2,6 @@ package org.example.main;
 
 import org.example.main.model.Cliente;
 import org.example.main.model.Cuenta;
-import org.example.main.model.Moneda;
-import org.example.main.service.ServiceCuenta;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;

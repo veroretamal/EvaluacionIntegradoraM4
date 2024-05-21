@@ -1,6 +1,6 @@
 package org.example.main.model;
 
-public class Moneda implements Conversor {
+public class Moneda {
     private String nombreDivisa;
     private double tasaDivisa;
     private String codigoDivisa;
@@ -10,6 +10,7 @@ public class Moneda implements Conversor {
         this.tasaDivisa = tasaDivisa;
         this.codigoDivisa = codigoDivisa;
     }
+
 
     public String getNombreDivisa() {
         return nombreDivisa;
