@@ -7,8 +7,7 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class ServiceConversorMoneda{
-
+public class ServiceConversorMoneda {
     public static void convertirDivisas(){
         Moneda peso = new Moneda("Chilean Peso", 1, "CLP");
         Moneda dolar = new Moneda("American Dollar", 0.001059, "USD");

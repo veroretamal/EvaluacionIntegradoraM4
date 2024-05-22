@@ -1,15 +1,20 @@
 package org.example.vista;
+
+import org.example.main.model.Cliente;
 import org.example.main.model.Cuenta;
 import org.example.main.service.ServiceCuenta;
 
-import  java.util.Scanner;
+import java.util.Scanner;
+
 import static org.example.main.service.ServiceConversorMoneda.convertirDivisas;
-import static org.example.main.service.ServiceCuenta.*;
 
 public class MenuAlkeWallet {
 
         public static void menu(){
+
         String bienvenida = """
+                
+                
                 *****************************************************
                 **          Bienvenido a tu AlkeWallet             **
                 *****************************************************""";

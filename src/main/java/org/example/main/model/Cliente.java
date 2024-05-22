@@ -6,13 +6,15 @@ import java.util.List;
 public class Cliente { //se definen los atributos correspondientes a la clase Cliente
     private String nombre;
     private String apellido;
-    private String rut;
-    private List<Cuenta> cuentas = new ArrayList<>();
+    private int rut;
+    private String claveSecreta;
+    private List<Cuenta> cuentas;
 
-    public Cliente(String nombre, String apellido, String rut) { //constructor
+    public Cliente(String nombre, String apellido, int rut, String claveSecreta) { //constructor
         this.nombre = nombre;
         this.apellido = apellido;
         this.rut = rut;
+        this.claveSecreta= claveSecreta;
         cuentas = new ArrayList<Cuenta>();
     }
 
@@ -37,14 +39,21 @@ public class Cliente { //se definen los atributos correspondientes a la clase Cl
         this.apellido = apellido;
     }
 
-    public String getRut() {
+    public int getRut() {
         return rut;
     }
 
-    public void setRut(String rut) {
+    public void setRut(int rut) {
         this.rut = rut;
     }
 
+    public String getClaveSecreta() {
+        return claveSecreta;
+    }
+
+    public void setClaveSecreta(String claveSecreta) {
+        this.claveSecreta = claveSecreta;
+    }
 
     public List<Cuenta> getCuentas() {
         return cuentas;
@@ -53,7 +62,7 @@ public class Cliente { //se definen los atributos correspondientes a la clase Cl
     public void setCuentas(List<Cuenta> cuentas) {
         this.cuentas = cuentas;
     }
-
+    //toString
     @Override
     public String toString() {
         return "Cliente{" +

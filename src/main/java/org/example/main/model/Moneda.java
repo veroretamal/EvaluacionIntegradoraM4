@@ -1,5 +1,8 @@
 package org.example.main.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Moneda {
     private String nombreDivisa;
     private double tasaDivisa;
@@ -10,7 +13,6 @@ public class Moneda {
         this.tasaDivisa = tasaDivisa;
         this.codigoDivisa = codigoDivisa;
     }
-
 
     public String getNombreDivisa() {
         return nombreDivisa;
