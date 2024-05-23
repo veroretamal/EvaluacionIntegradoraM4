@@ -1,12 +1,12 @@
 package org.example.main.model;
 
 public class Cuenta {
-    private String numeroCuenta;
-    private double saldo;
+    private final String numeroCuenta;
+    protected static double saldo;
 
     public Cuenta(String numeroCuenta) {
         this.numeroCuenta = numeroCuenta;
-        this.saldo= saldo;
+        this.saldo=0;
     }
 
     public String getNumeroCuenta() {
@@ -20,9 +20,6 @@ public class Cuenta {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-
-
-
 
     @Override
     public String toString() {

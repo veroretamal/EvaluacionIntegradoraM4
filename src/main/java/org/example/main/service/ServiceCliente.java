@@ -12,14 +12,6 @@ public class ServiceCliente {
         this.clientes = new HashMap<Integer, Cliente>();
     }
 
-    public String crearCliente(Cliente cliente) { //se define metodo crearCliente
-        if(cliente == null) {
-            return "Error, datos inválidos. Verificar cliente";
-        }
-        clientes.put(cliente.getRut(), cliente);
-        return "Cliente creado con éxito";
-    }
-
     public Map<Integer, Cliente> leerClientes() { //se define metodo leerCliente
         return this.clientes;
     }

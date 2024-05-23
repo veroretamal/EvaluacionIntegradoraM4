@@ -3,6 +3,8 @@ import org.example.main.model.Cliente;
 import org.example.main.model.Cuenta;
 import org.example.main.service.ServiceCliente;
 import org.example.main.service.ServiceCuenta;
+import org.example.vista.MenuAlkeWallet;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -25,7 +27,8 @@ public class AlkeBanco {
         cliente1.getCuentas().add(cuentaCliente1);
         cliente2.getCuentas().add(cuentaCliente2);
 
-       // menu();
+
+        MenuAlkeWallet.menu();
 
 
     }

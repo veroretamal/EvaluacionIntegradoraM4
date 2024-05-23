@@ -11,13 +11,6 @@ public class ServiceClienteTest{
     Cliente cliente = new Cliente("Nelson", "Jaque", 128765271,"1287");
 
     @Test
-    public void testCrearCliente() {
-        var resultado = serviceCliente.crearCliente(cliente);
-        assertEquals(resultado, "Cliente creado con éxito");
-
-    }
-
-    @Test
     public void testActualizarCliente() {
         var resultado = serviceCliente.actualizarCliente(cliente);
         assertEquals(resultado, "Cliente actualizado");
