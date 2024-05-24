@@ -7,7 +7,11 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class ServiceConversorMoneda {
+public class ServiceConversorMoneda extends Moneda{
+    public ServiceConversorMoneda(String nombreDivisa, double tasaDivisa, String codigoDivisa) {
+        super(nombreDivisa, tasaDivisa, codigoDivisa);
+    }
+
     public static void convertirDivisas(){
         Moneda peso = new Moneda("Chilean Peso", 1, "CLP");
         Moneda dolar = new Moneda("American Dollar", 0.001059, "USD");
@@ -40,9 +44,12 @@ public class ServiceConversorMoneda {
             if(monedaBase == null || monedaDestino == null) {
                 throw new Exception("Ingresa una moneda válida");
             }
-            System.out.println("Moneda base " + monedaBase.getCodigoDivisa());
-            System.out.println("Moneda destino " + monedaDestino.getCodigoDivisa());
-            System.out.printf("Monto base: %.2f\nMonto destino: %.2f", monto, (monto*monedaDestino.getTasaDivisa()/monedaBase.getTasaDivisa()));
+            System.out.println("Moneda base: " + monedaBase.getCodigoDivisa());
+            System.out.println("Moneda destino: " + monedaDestino.getCodigoDivisa());
+            System.out.printf("Monto base: %.2f %s\nMonto destino: %.2f %s\n",
+                    monto, monedaBase.getCodigoDivisa(),
+                    (monto * monedaDestino.getTasaDivisa() / monedaBase.getTasaDivisa()),
+                    monedaDestino.getCodigoDivisa());
 
         } catch (InputMismatchException e) {
             System.err.println("Ingresa un número válido");

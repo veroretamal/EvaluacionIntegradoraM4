@@ -7,19 +7,21 @@ public class Cliente { //se definen los atributos correspondientes a la clase Cl
     private String nombre;
     private String apellido;
     private int rut;
-    private String claveSecreta;
-    private List<Cuenta> cuentas;
+   private List<Cuenta> cuentas;
 
-    public Cliente(String nombre, String apellido, int rut, String claveSecreta) { //constructor
+    public Cliente(String nombre, String apellido, int rut) { //constructor
         this.nombre = nombre;
         this.apellido = apellido;
         this.rut = rut;
-        this.claveSecreta= claveSecreta;
         cuentas = new ArrayList<Cuenta>();
     }
 
     public Cliente(List<Cuenta> cuentas) {
         this.cuentas = cuentas;
+    }
+
+    public void addCuenta(Cuenta cuenta) {
+        this.cuentas.add(cuenta);
     }
 
     //getters y setters de atributos privados
@@ -45,14 +47,6 @@ public class Cliente { //se definen los atributos correspondientes a la clase Cl
 
     public void setRut(int rut) {
         this.rut = rut;
-    }
-
-    public String getClaveSecreta() {
-        return claveSecreta;
-    }
-
-    public void setClaveSecreta(String claveSecreta) {
-        this.claveSecreta = claveSecreta;
     }
 
     public List<Cuenta> getCuentas() {

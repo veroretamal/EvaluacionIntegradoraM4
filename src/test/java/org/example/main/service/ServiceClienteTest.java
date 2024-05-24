@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class ServiceClienteTest{
 
     ServiceCliente serviceCliente = new ServiceCliente();
-    Cliente cliente = new Cliente("Nelson", "Jaque", 128765271,"1287");
+    Cliente cliente = new Cliente("Nelson", "Jaque", 128765271);
 
     @Test
     public void testActualizarCliente() {

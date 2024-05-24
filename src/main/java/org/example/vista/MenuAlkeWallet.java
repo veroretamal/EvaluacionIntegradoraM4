@@ -1,9 +1,8 @@
 package org.example.vista;
-import org.example.main.AlkeBanco;
-import org.example.main.service.ServiceCuenta;
+import org.example.main.service.ServiceCtaPeso;
 import java.util.Scanner;
 import static org.example.main.service.ServiceConversorMoneda.convertirDivisas;
-import static org.example.main.service.ServiceCuenta.*;
+import static org.example.main.service.ServiceCtaPeso.*;
 
 public class MenuAlkeWallet {
     public static void menu() {
@@ -16,19 +15,33 @@ public class MenuAlkeWallet {
                 ** 0- Salir                                        **
                 *****************************************************""";
         System.out.println(menu);
-        Scanner leer = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        int option = leer.nextInt();
+        int option = sc.nextInt();
         switch (option) {
             case 1:
-                consultaSaldo("010016008", 1000000);
+                ServiceCtaPeso.consultaSaldo();
                 menu();
                 break;
             case 2:
-                retirar("010016008", 60000, 10);
-                break;
+            System.out.println("Ingrese el monto a depositar:");
+            double montoDeposito = sc.nextDouble();
+            if (ServiceCtaPeso.depositar(montoDeposito)) {
+                System.out.println("Depósito realizado con éxito");
+            } else {
+                System.out.println("No se pudo realizar el depósito");
+            }
+            menu();
+            break;
             case 3:
-                depositar("010016009", 1000, 15000);
+                System.out.println("Ingrese el monto a retirar:");
+                double montoRetiro = sc.nextDouble();
+                if (ServiceCtaPeso.retirar(montoRetiro)) {
+                    System.out.println("Retiro realizado con éxito");
+                } else {
+                    System.out.println("No se pudo realizar el retiro");
+                }
+                menu();
                 break;
             case 4:
                 convertirDivisas();

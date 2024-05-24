@@ -23,10 +23,6 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta{" +
-                "numeroCuenta='" + numeroCuenta + '\'' +
-                ", saldo=" + saldo +
-
-                '}';
+        return STR."Cuenta{numeroCuenta='\{numeroCuenta}\{'\''}, saldo=\{saldo}\{'}'}";
     }
 }
