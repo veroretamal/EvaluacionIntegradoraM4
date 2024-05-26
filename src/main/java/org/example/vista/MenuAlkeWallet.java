@@ -6,6 +6,8 @@ import static org.example.main.service.ServiceCtaPeso.*;
 
 public class MenuAlkeWallet {
     public static void menu() {
+
+        //menú para la consola en el cual se ingresan las opciones solicitadas
         String menu = """
                 *****************************************************
                 ** 1- Ver mi saldo                                 **
